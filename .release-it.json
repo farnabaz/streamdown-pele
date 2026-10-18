@@ -1,26 +1,39 @@
 {
   "$schema": "https://unpkg.com/release-it@21/schema/release-it.json",
   "git": {
+    "commitMessage": "chore: release v${version}",
+    "tagName": "v${version}",
+    "tagAnnotation": "Release v${version}",
     "requireBranch": "main",
-    "requireCleanWorkingDir": true,
-    "commitMessage": "chore(release): v${version}",
-    "tagName": "v${version}"
+    "requireCleanWorkingDir": true
   },
   "github": {
     "release": true,
     "releaseName": "v${version}"
   },
   "npm": {
-    "publish": true
-  },
-  "hooks": {
-    "before:init": ["pnpm typecheck", "pnpm test"]
+    "publish": true,
+    "publishPackageManager": "pnpm",
+    "publishArgs": ["--no-git-checks"]
   },
   "plugins": {
     "@release-it/conventional-changelog": {
-      "preset": { "name": "conventionalcommits" },
+      "ignoreRecommendedBump": true,
+      "preset": {
+        "name": "conventionalcommits",
+        "types": [
+          { "type": "feat", "section": "Features" },
+          { "type": "fix", "section": "Bug Fixes" },
+          { "type": "perf", "section": "Performance" },
+          { "type": "docs", "section": "Documentation" },
+          { "type": "chore", "hidden": true }
+        ]
+      },
       "infile": "CHANGELOG.md",
       "header": "# Changelog"
     }
+  },
+  "hooks": {
+    "before:init": ["pnpm run verify"]
   }
 }

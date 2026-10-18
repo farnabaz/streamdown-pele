@@ -42,9 +42,12 @@
     "test": "vitest run",
     "playground": "vite --config playground/vite.config.ts",
     "playground:build": "vite build --config playground/vite.config.ts",
+    "verify": "pnpm typecheck && pnpm test && pnpm build",
     "prepack": "pnpm build",
-    "prepublishOnly": "pnpm typecheck && pnpm test",
     "release": "release-it"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "peerDependencies": {
     "streamdown": "^2.7.0"
