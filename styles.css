@@ -1,0 +1,23 @@
+/*
+ * Optional: make Pele diagrams follow Streamdown / shadcn theme tokens
+ * (Tailwind v4 style, where tokens are full colors such as oklch(...)).
+ * Pele reads these variables at paint time, so light/dark switches
+ * apply without re-rendering.
+ */
+[data-streamdown="mermaid-block"],
+[data-streamdown="mermaid-fullscreen"] {
+  --pele-bg: var(--background);
+  --pele-fg: var(--foreground);
+  --pele-muted: var(--muted-foreground);
+  --pele-line: var(--foreground);
+  --pele-surface: var(--muted);
+  --pele-surface-alt: var(--accent);
+  --pele-border: var(--border);
+  --pele-accent: var(--primary);
+  --pele-radius: var(--radius);
+  --pele-series-1: var(--chart-1);
+  --pele-series-2: var(--chart-2);
+  --pele-series-3: var(--chart-3);
+  --pele-series-4: var(--chart-4);
+  --pele-series-5: var(--chart-5);
+}
