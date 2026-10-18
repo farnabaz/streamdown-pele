@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Render Streamdown mermaid code blocks with Pele, kepano's fast Mermaid renderer.",
   "type": "module",
+  "packageManager": "pnpm@12.9.1",
   "license": "MIT",
   "author": "Farnabaz <farnabaz@gmail.com>",
   "homepage": "https://github.com/farnabaz/streamdown-pele#readme",
