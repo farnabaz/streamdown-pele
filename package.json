@@ -1,6 +1,6 @@
 {
   "name": "streamdown-pele",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Render Streamdown mermaid code blocks with Pele.",
   "type": "module",
   "packageManager": "pnpm@12.9.1",
