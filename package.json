@@ -1,7 +1,7 @@
 {
   "name": "streamdown-pele",
   "version": "0.0.0",
-  "description": "Render Streamdown mermaid code blocks with Pele, kepano's fast Mermaid renderer.",
+  "description": "Render Streamdown mermaid code blocks with Pele.",
   "type": "module",
   "packageManager": "pnpm@12.9.1",
   "license": "MIT",
